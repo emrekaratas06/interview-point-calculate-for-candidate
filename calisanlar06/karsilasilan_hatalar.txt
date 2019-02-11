@@ -1,0 +1,28 @@
+Programin amaci--> Öðretmenin branþýnda girdiði siniflarý, talimterbiyenin 
+haftalik ders saatisayisini esas alan diziden çekip, bu verileri tek tek
+ j table toplayýp oradan bir önceki jdialogdaki derssaatisayisi 
+alanina yönlendirip, ekders hesaplanmasini saðlamak. 
+
+iki ayrý veritabaný altýnda verileri tutmaktadýr.
+calisanlar tablosu -->  öðretmenlerin ücretlerine yönelikdir
+dersprogrami tablosu --> Öðretmenlerin hangi sinifin derslerine girdiði ve
+toplamda kaç saat derse girdiðini saklamaktadýr.
+
+<-----------Sorun Çýkaran iþlemler--------------------->
+
+1- Çalýþan Ekranýnda aktif olan kiþiye ait ad, soyad brans, derssaatisayisi
+alanlarina, ders programý butonuna týklayýnca taþýyamýyorum.(burayý yaptým) 
+Ayrýca DersProgrami ekranindaki jtable da  sadece o kiþiye ait girdiði sýnýflarý 
+toplayýp toplam ders saati ve siniflari güncellendikten sonra, bir önceki form olan
+ÇalýþanEkrani nýndaki derssaati alanina gönderemiyor.
+
+2- Veritabanýnda iliþkilendirme yapmaya çalýþtým. Ayný id deki kiþileri
+ baðlayýp diðer tablodaki(dersprogrami tablosu) ad, soyad alanlarini otomatik
+doldurtamadým.
+
+Sürekli hatalar alýyorum. Ya Fazla gereksiz kod yazýyorum yada düþündüklerimle
+yaptýklarým farklý.
+
+
+Þimdiden teþekkür ederim zaman ayýrdýðýnýz için. Kolay gelsin..
+
