@@ -1,2 +1,2 @@
-# demo
-bu bir demo kurulumdur
+# java
+bu bir java projesidir.
