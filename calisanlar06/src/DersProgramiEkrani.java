@@ -191,14 +191,14 @@ public class DersProgramiEkrani extends javax.swing.JDialog {
     
     private void dersekle_alaniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dersekle_alaniActionPerformed
       mesaj_alani.setText("");
-        
+        String id= id_alani.getText();
         String ad  =  ad_alani.getText();
         String soyad = soyad_alani.getText();
         String brans = brans_alani.getText();
         String sinif=String.valueOf(sinifsecim_alani.getSelectedItem());
         String sube = String.valueOf(subesecim_alani.getSelectedItem());
         String derssaatisayisi = derssaatisayisi_alani.getText();
-        islemler.dersEkle(ad,soyad,brans,sinif,sube, derssaatisayisi);
+        islemler.dersEkle(Integer.valueOf(id),ad,soyad,brans,sinif,sube, derssaatisayisi);
         
         dersGoruntule();
         
@@ -225,9 +225,9 @@ public class DersProgramiEkrani extends javax.swing.JDialog {
         }
         else {
            
-            int id = (int)model.getValueAt(selectedrow,0);
+           int id_a= Integer.parseInt(id); //int id = (int)model.getValueAt(selectedrow,0);
            
-            islemler.dersGuncelle(id,ad,soyad,brans,sinif,sube,derssaatisayisi);
+            islemler.dersGuncelle(id_a,ad,soyad,brans,sinif,sube,derssaatisayisi);
             
             dersGoruntule();
             
@@ -256,7 +256,7 @@ public class DersProgramiEkrani extends javax.swing.JDialog {
            
            dersGoruntule();
            
-           mesaj_alani.setText("Çalışan başarıyla silindi...");
+           mesaj_alani.setText("Çalışan sınıfa dersi başarıyla silindi...");
         
        }        // TODO add your handling code here:
     }//GEN-LAST:event_derssil_alaniActionPerformed
@@ -265,13 +265,13 @@ public class DersProgramiEkrani extends javax.swing.JDialog {
       
         int selectedrow = ders_tablosu.getSelectedRow();
         
-        
-        ad_alani.setText(model.getValueAt(selectedrow,1).toString());
-        soyad_alani.setText(model.getValueAt(selectedrow,2).toString());
-        brans_alani.setText(model.getValueAt(selectedrow,3).toString());
-        sinifsecim_alani.setSelectedItem(model.getValueAt(selectedrow,4).toString());
-        subesecim_alani.setSelectedItem(model.getValueAt(selectedrow,5).toString());
-        derssaatisayisi_alani.setText(model.getValueAt(selectedrow,6).toString());
+        id_alani.setText(model.getValueAt(selectedrow,1).toString());
+        ad_alani.setText(model.getValueAt(selectedrow,2).toString());
+        soyad_alani.setText(model.getValueAt(selectedrow,3).toString());
+        brans_alani.setText(model.getValueAt(selectedrow,4).toString());
+        sinifsecim_alani.setSelectedItem(model.getValueAt(selectedrow,5).toString());
+        subesecim_alani.setSelectedItem(model.getValueAt(selectedrow,6).toString());
+        derssaatisayisi_alani.setText(model.getValueAt(selectedrow,7).toString());
     } 
         public void dersGoruntule() {
         
