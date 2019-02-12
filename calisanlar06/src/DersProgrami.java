@@ -8,7 +8,7 @@ public class DersProgrami {
     private String derssaatisayisi;
     private String sinif;
     private String sube;
-    private int derssaati;
+    //private int derssaati;
 
     public DersProgrami(int id, String ad, String soyad, String brans, String derssaatisayisi, String sinif, String sube) {
         this.id = id;
@@ -76,7 +76,7 @@ public class DersProgrami {
         this.sube = sube;
     }
     
-    public String haftalikDersSaatiSayisi(String derssaati){
+    public String haftalikDersSaatiSayisi(String derskacsaat){
         // 0.index --> 5.siniflar
         // 1.index --> 6.siniflar
         // 2.index --> 7.siniflar
