@@ -335,6 +335,12 @@ public class DersProgramiEkrani extends javax.swing.JDialog {
             }
         });
     }
+     public void gelenVeriler(String ad, String soyad, String brans, String id){
+        ad_alani.setText(ad);
+        soyad_alani.setText(soyad);
+        brans_alani.setText(brans);
+        id_alani.setText(id);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ad_alani;
