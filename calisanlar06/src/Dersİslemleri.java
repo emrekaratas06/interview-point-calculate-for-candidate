@@ -14,13 +14,13 @@ public class Dersİslemleri {
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     
-    public ArrayList<DersProgrami> dersleriGetir() {
+    public ArrayList<DersProgrami> dersleriGetir(int gelen_id) {
         
         ArrayList<DersProgrami> cikti = new ArrayList<DersProgrami>();
         
         try {
             statement =  con.createStatement();
-            String sorgu =  "Select * From dersprogrami";
+            String sorgu =  "Select * From dersprogrami where id_gelen";
             
             ResultSet rs =  statement.executeQuery(sorgu);
             
@@ -82,19 +82,19 @@ public class Dersİslemleri {
 
     }
      
-      public void dersEkle(String ad,String soyad,String brans,String sinif,String sube,String derssaatisayisi) {
+      public void dersEkle(int id, String ad,String soyad,String brans,String sinif,String sube,String derssaatisayisi) {
         
         String sorgu = "Insert Into dersprogrami (ad,soyad,brans,sinif,sube,derssaatisayisi) VALUES(?,?,?,?,?,?)";
         
         try {
             preparedStatement = con.prepareStatement(sorgu);
-         
-            preparedStatement.setString(1, ad);
-            preparedStatement.setString(2, soyad);
-            preparedStatement.setString(3, brans);
-            preparedStatement.setString(4, sinif);
-            preparedStatement.setString(5, sube);
-            preparedStatement.setString(6, derssaatisayisi);
+            preparedStatement.setInt(1, ad);
+            preparedStatement.setString(2, ad);
+            preparedStatement.setString(3, soyad);
+            preparedStatement.setString(4, brans);
+            preparedStatement.setString(5, sinif);
+            preparedStatement.setString(6, sube);
+            preparedStatement.setString(7, derssaatisayisi);
             //preparedStatement.setString(6, derssaatisayisi);
             
             preparedStatement.executeUpdate();
