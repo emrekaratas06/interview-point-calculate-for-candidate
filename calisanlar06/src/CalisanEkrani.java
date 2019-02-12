@@ -371,6 +371,7 @@ public class CalisanEkrani extends javax.swing.JDialog {
 
     private void dersprogramiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dersprogramiMouseClicked
         DersProgramiEkrani dersdialog = new DersProgramiEkrani(new javax.swing.JFrame(), true); 
+        dersdialog.gelenVeriler(ad_alani.getText(), soyad_alani.getText(), String.valueOf(brans_alani.getSelectedItem()), id_alani.getText());
         this.setVisible(false);//
         dersdialog.setVisible(true);
     }//GEN-LAST:event_dersprogramiMouseClicked
