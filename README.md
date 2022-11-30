@@ -1,2 +1,2 @@
-# java
-bu bir java projesidir.
+This is a Java Swing project for 
+İnterview point calculate. 
